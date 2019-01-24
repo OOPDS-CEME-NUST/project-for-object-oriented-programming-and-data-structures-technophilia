@@ -57,11 +57,11 @@ void list::order_goods()
 				d *= 10;
 			}
 			sum += Pquantity;
-			
+
 
 
 			/*sum = (long)quantity[v];
-			
+
 			cout << "sum" << sum;*/
 
 			_itoa_s(sum, quantity[v], 10);
@@ -171,6 +171,7 @@ int main()
 	char s[50];
 	char pass[50] = "password";
 start:
+	system("cls");
 	cout << "\t\t\t\tStore management system\n";
 	cout << "\n\n\n Input password to access the system\n";
 	cin >> s;
@@ -178,26 +179,27 @@ start:
 	{
 	A:
 		system("cls");
-			cout << "Make your choice:\n[1] For see products\n[2] For order products\n[3] For quit\n\n";
-			list ob;
-			char a;
-			cin >> a;
-			system("cls");
-			ob.goods();
-			if (a == 49)
-				ob.show_goods();
-			else if (a == 50)
-				ob.order_goods();
-			else if (a == 51)
-				exit(0);
-			else
-				goto A;
+		cout << "Make your choice:\n[1] For see products\n[2] For order products\n[3] For quit\n\n";
+		list ob;
+		char a;
+		cin >> a;
+		system("cls");
+		ob.goods();
+		if (a == 49)
+			ob.show_goods();
+		else if (a == 50)
+			ob.order_goods();
+		else if (a == 51)
+			exit(0);
+		else
+			goto A;
 		cout << "\n\nPress any key to return to Main Menu.";
 		_getch();
 		goto A;
 	}
 	else
 	{
+		system("cls");
 		cout << "incorrect password";
 		goto start;
 	}
