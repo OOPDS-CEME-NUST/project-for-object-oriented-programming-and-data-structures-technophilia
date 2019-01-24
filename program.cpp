@@ -41,7 +41,7 @@ void list::order_goods()
 		char read;
 		cout << "Enter quantity(kg): ";
 		cin >> Pquantity;
-	AA:
+	B:
 		cout << "Are you sure of ordering " << Pquantity << " kg of " << name[v];
 		cout << "\nEnter (y/n)";
 		cin >> read;
@@ -81,10 +81,9 @@ void list::order_goods()
 		else
 		{
 			system("cls");
-			goto AA;
+			goto B;
 		}
-		//char y='n';
-		//printf("%d",y);
+		
 	}
 }
 void list::goods()
@@ -94,14 +93,13 @@ void list::goods()
 	ifstream fin;
 	fin.open("list.txt", ofstream::in);
 
-	//char s[2000];
+	
 	count = 0;
 	while (fin >> str)
 	{
 
 		int savei = 0;
-		//cout<<str;
-		//   cout<<strlen(str)<<" ";
+		
 		int i = 0;
 		int d = 0;
 		while (i < strlen(str))
@@ -130,14 +128,13 @@ void list::goods()
 				else if (d == 4)
 					strcpy_s(quantity[count], s);
 				d++;
-				//cout<<"strlen="<<l<<",s="<<s<<"\n";
-				//char tab='\t';
-				//printf("%5c",tab);
+				
+	
 
 				i++;
 				savei = i;
 			}
-			//printf("%c",str[i]);
+			
 
 			i++;
 
